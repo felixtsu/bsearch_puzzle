@@ -1,10 +1,11 @@
 {
-    "name": "bsearch_test",
+    "name": "bsearch_test - 复制",
     "description": "",
     "dependencies": {
         "device": "*",
         "arcade-story": "github:microsoft/arcade-storytelling#v1.0.3",
-        "arcade-background-scroll": "github:microsoft/arcade-background-scroll#6cfbf925b9a4d5ddf3e1078e6cf6ca6a1aebb301"
+        "arcade-background-scroll": "github:microsoft/arcade-background-scroll#6cfbf925b9a4d5ddf3e1078e6cf6ca6a1aebb301",
+        "animation": "*"
     },
     "files": [
         "main.blocks",

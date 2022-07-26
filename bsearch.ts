@@ -336,6 +336,29 @@ namespace bsearch {
         strectedStudent.x = 284
 
 
+        for (let i = 0; i < 5; i++) {
+            let studentSprite = sprites.create(img`
+                . . . . f f f f . . . . .
+                . . f f f f f f f f . . .
+                . f f f f f f c f f f . .
+                f f f f f f c c f f f c .
+                f f f c f f f f f f f c .
+                c c c f f f e e f f c c .
+                f f f f f e e f f c c f .
+                f f f b f e e f b f f f .
+                . f 4 1 f 4 4 f 1 4 f . .
+                . f e 4 4 4 4 4 4 e f . .
+                . f f f e e e e f f f . .
+                f e f b 7 7 7 7 b f e f .
+                e 4 f 7 7 7 7 7 7 f 4 e .
+                e e f 6 6 6 6 6 6 f e e .
+                . . . f f f f f f . . . .
+                . . . f f . . f f . . . .
+            `, SpriteKind.Student);
+            studentSprite.x = 0 + i * 16;
+        }
+
+
         for (let i = 0; i < 5;i++)  {
             let studentSprite = sprites.create(img`
                 . . . . f f f f . . . . .
@@ -360,6 +383,28 @@ namespace bsearch {
             if (i == 2) {
                 respondingStudent = studentSprite
             }
+        }
+
+        for (let i = 0; i < 5; i++) {
+            let studentSprite = sprites.create(img`
+                . . . . f f f f . . . . .
+                . . f f f f f f f f . . .
+                . f f f f f f c f f f . .
+                f f f f f f c c f f f c .
+                f f f c f f f f f f f c .
+                c c c f f f e e f f c c .
+                f f f f f e e f f c c f .
+                f f f b f e e f b f f f .
+                . f 4 1 f 4 4 f 1 4 f . .
+                . f e 4 4 4 4 4 4 e f . .
+                . f f f e e e e f f f . .
+                f e f b 7 7 7 7 b f e f .
+                e 4 f 7 7 7 7 7 7 f 4 e .
+                e e f 6 6 6 6 6 6 f e e .
+                . . . f f f f f f . . . .
+                . . . f f . . f f . . . .
+            `, SpriteKind.Student);
+            studentSprite.x = 332 + i * 16;
         }
 
         tiles.placeOnTile(cameraMan, tiles.getTileLocation(12, 4))
@@ -403,17 +448,44 @@ namespace bsearch {
         let finished = false;
 
         if (index > lastIndex) {
-            scroller.scrollBackgroundWithSpeed(-80, 0)
-            story.spriteMoveToLocation(headSprite, headSprite.x + 32, headSprite.y, 100);
+            // scroller.scrollBackgroundWithSpeed(-80, 0)
+            animation.runImageAnimation(headSprite, [sprites.castle.heroWalkSideRight1, sprites.castle.heroWalkSideRight2, sprites.castle.heroWalkSideRight3, sprites.castle.heroWalkSideRight4], 200, true)
+            story.spriteMoveToLocation(headSprite, headSprite.x + 88, headSprite.y, 100);
+            // scroller.scrollBackgroundWithSpeed(-180, 0)
+            story.spriteMoveToLocation(cameraMan, headSprite.x + 168, headSprite.y, 200);
+            story.spriteMoveToLocation(headSprite, headSprite.x + 88, headSprite.y, 300);
+            animation.stopAnimation(animation.AnimationTypes.ImageAnimation, headSprite)
+            // scroller.scrollBackgroundWithSpeed(0, 0)/
         } else {
-            scroller.scrollBackgroundWithSpeed(80, 0)
-            story.spriteMoveToLocation(headSprite, headSprite.x - 32, headSprite.y, 100);
-            
+            // scroller.scrollBackgroundWithSpeed(80, 0)
+            animation.runImageAnimation(headSprite, [sprites.castle.heroWalkSideLeft1, sprites.castle.heroWalkSideLeft2, sprites.castle.heroWalkSideLeft3, sprites.castle.heroWalkSideLeft4], 200, true)
+            story.spriteMoveToLocation(headSprite, headSprite.x - 88, headSprite.y, 100);
+            // scroller.scrollBackgroundWithSpeed(180, 0)
+            story.spriteMoveToLocation(cameraMan, headSprite.x - 168, headSprite.y, 200);
+            story.spriteMoveToLocation(headSprite, headSprite.x - 88, headSprite.y, 300);
+            animation.stopAnimation(animation.AnimationTypes.ImageAnimation, headSprite)
+            // scroller.scrollBackgroundWithSpeed(0, 0)
         }
+        headSprite.setImage(img`
+            . . . . . . f f f f . . . . . .
+            . . . . f f e e e e f f . . . .
+            . . . f e e e f f e e e f . . .
+            . . f f f f f 2 2 f f f f f . .
+            . . f f e 2 e 2 2 e 2 e f f . .
+            . . f e 2 f 2 f f 2 f 2 e f . .
+            . . f f f 2 2 e e 2 2 f f f . .
+            . f f e f 2 f e e f 2 f e f f .
+            . f e e f f e e e e f e e e f .
+            . . f e e e e e e e e e e f . .
+            . . . f e e e e e e e e f . . .
+            . . e 4 f f f f f f f f 4 e . .
+            . . 4 d f 2 2 2 2 2 2 f d 4 . .
+            . . 4 4 f 4 4 4 4 4 4 f 4 4 . .
+            . . . . . f f f f f f . . . . .
+            . . . . . f f . . f f . . . . .
+        `)
 
-        scroller.scrollBackgroundWithSpeed(0, 0)
-
-
+        tiles.placeOnTile(cameraMan, tiles.getTileLocation(12, 6));
         tiles.placeOnTile(headSprite, tiles.getTileLocation(12, 6));
          
         if (index < 0 || index >= weights.length || index.toString().indexOf(".") != -1) {
