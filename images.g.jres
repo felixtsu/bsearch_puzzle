@@ -1,0 +1,12 @@
+{
+    "image1": {
+        "data": "hwRYABAAAAAA8M//APDuAAD/z///7+QA8P/P/+T//wDw//y/Qb9n/////+5Efmf/////7kR+Zw/////uRH5nD////+5EfmcP////7kR+Zw/////uRH5nD////+5EfmcP////7kR+Zw/////uRH5nD////+5EfmcP////7kR+Zw/////uRH5nD////+5EfmcP////7kR+Zw/////uRH5nD////+5EfmcP////7kR+Zw/////uRH5nD////+5EfmcP////7kR+Zw/////uRH5nD////+5EfmcP////7kR+Zw/////uRH5nD////+5EfmcP////7kR+Zw/////uRH5nD////+5EfmcP////7kR+Zw/////uRH5nD////+5EfmcP////7kR+Zw/////uRH5nD////+5EfmcP////7kR+Zw/////uRH5nD////+5EfmcP////7kR+Zw/////uRH5nD////+5EfmcP/8/v7kR+Zw//z+/uRH5nD//P7+5EfmcP/8/v7kR+Zw//z+/uRH5nD//P7+5EfmcP/8/v7kR+Zw//z+/uRH5nD//P7+5EfmcP/8/v7kR+Zw//z+/uRH5nD//P7+5EfmcP/8/v7kR+Zw//z+/uRH5nD//P7+5EfmcP/8/v7kR+Zw//z+/uRH5nD//P7+5EfmcP/8/v7kR+Zw//z+/uRH5nD//P7+5EfmcP/8/v7kR+Zw//z+/uRH5nD//P7+5EfmcP/8/v7kR+Zw//z+/uRH5nD//P7+5EfmcP/8/v7kR+Zw//z+/uRH5nD//P7+5EfmcP/8/v7kR+Zw//z+/uRH5nD//P7+5EfmcP/8/v7kR+Zw//z+/uRH5nD//P7+5EfmcP/8/v7kR+Zw//z+/uRH5nD//P7+5EfmcP/8zv/09+Z//w//+/Qb9n//D///zk//8AAP/P/P/v5AAAwMz/APDuAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "stretchedStudent"
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myImages"
+    }
+}
