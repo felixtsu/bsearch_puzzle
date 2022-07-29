@@ -451,20 +451,22 @@ namespace bsearch {
             // scroller.scrollBackgroundWithSpeed(-80, 0)
             animation.runImageAnimation(headSprite, [sprites.castle.heroWalkSideRight1, sprites.castle.heroWalkSideRight2, sprites.castle.heroWalkSideRight3, sprites.castle.heroWalkSideRight4], 200, true)
             story.spriteMoveToLocation(headSprite, headSprite.x + 88, headSprite.y, 100);
-            // scroller.scrollBackgroundWithSpeed(-180, 0)
-            story.spriteMoveToLocation(cameraMan, headSprite.x + 168, headSprite.y, 200);
+            scroller.scrollBackgroundWithSpeed(80, 0)
+            story.spriteMoveToLocation(cameraMan, headSprite.x + 120, headSprite.y, 200);
+            pause(500);
             story.spriteMoveToLocation(headSprite, headSprite.x + 88, headSprite.y, 300);
             animation.stopAnimation(animation.AnimationTypes.ImageAnimation, headSprite)
-            // scroller.scrollBackgroundWithSpeed(0, 0)/
+            scroller.scrollBackgroundWithSpeed(0, 0)
         } else {
             // scroller.scrollBackgroundWithSpeed(80, 0)
             animation.runImageAnimation(headSprite, [sprites.castle.heroWalkSideLeft1, sprites.castle.heroWalkSideLeft2, sprites.castle.heroWalkSideLeft3, sprites.castle.heroWalkSideLeft4], 200, true)
             story.spriteMoveToLocation(headSprite, headSprite.x - 88, headSprite.y, 100);
-            // scroller.scrollBackgroundWithSpeed(180, 0)
-            story.spriteMoveToLocation(cameraMan, headSprite.x - 168, headSprite.y, 200);
+            scroller.scrollBackgroundWithSpeed(-80, 0)
+            story.spriteMoveToLocation(cameraMan, headSprite.x - 60, headSprite.y, 200);
+            pause(500);
             story.spriteMoveToLocation(headSprite, headSprite.x - 88, headSprite.y, 300);
             animation.stopAnimation(animation.AnimationTypes.ImageAnimation, headSprite)
-            // scroller.scrollBackgroundWithSpeed(0, 0)
+            scroller.scrollBackgroundWithSpeed(0, 0)
         }
         headSprite.setImage(img`
             . . . . . . f f f f . . . . . .
