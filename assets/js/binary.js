@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.8.29/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.1","target":"arcade","targetVersion":"1.8.29","repo":"felixtsu/bsearch_puzzle"}
-// total=1239443 new=6.75% cached=87.73% other=5.51%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.8.29/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.2","target":"arcade","targetVersion":"1.8.29","repo":"felixtsu/bsearch_puzzle"}
+// total=1239445 new=6.75% cached=87.73% other=5.51%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -406,7 +406,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P120810(s) {
+function _main___P130946(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -785,7 +785,7 @@ switch (step) {
     s.callLocIdx = 55; s.pc = 34; return s.tmp_0;
   case 34:
     r0 = s.retval;
-    globals.Student___97984 = (r0);
+    globals.Student___130310 = (r0);
     r0 = pxsim.image.ofBuffer(_hex101091);
     globals.transparency16___97986 = (r0);
     s.tmp_0 = helpers__registerFactory__P96723_mk(s);
@@ -816,13 +816,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P120810.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/arcade-background-scroll/main.ts","functionName":"<main>","argumentNames":[]}
-_main___P120810.continuations = [  ]
+_main___P130946.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/arcade-background-scroll/main.ts","functionName":"<main>","argumentNames":[]}
+_main___P130946.continuations = [  ]
 
-function _main___P120810_mk(s) {
+function _main___P130946_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P120810, depth: s.depth + 1,
+        parent: s, fn: _main___P130946, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -41711,7 +41711,7 @@ const sprites_BaseSpriteSayRenderer__C95752_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["Student___97984","transparency16___97986"])
+const breakpoints = setupDebugger(1, ["Student___130310","transparency16___97986"])
 
-return _main___P120810
+return _main___P130946
 })
