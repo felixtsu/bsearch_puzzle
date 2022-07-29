@@ -18,15 +18,16 @@ namespace bsearch {
 
 
     //%block 
-    //% group = "排队"
     //%blockid=bsearch_size block="一共多少人"
+    //% group = "排队"
     export function size() {
         return length;
     }
 
     //%block
-    //% group = "游戏控制"
+    
     //%blockid=bsearch_startgame block="开始挑战"
+    //% group = "游戏控制"
     export function startGame() {
 
         scene.setTileMapLevel(assets.tilemap`default`)
@@ -416,17 +417,17 @@ namespace bsearch {
 
 
     //%block
-    //%group = "排队"
     //%blockid=bsearch_solvepuzzle block="在队伍 $weights 里找到编号 $target 的学生 "
-    //% draggableParameters
+    //%draggableParameters
+    //%group = "排队"
     export function solvePuzzle(cb: (weights: number[], target: number) => void) {
         solver = cb;
     }
 
 
     //%block
-    //%group = "排队"
     //%blockid=bsearch_sumbitanswer block="第 %answer 位就是要找的人"
+    //%group = "排队"
     export function submitAnswer(answer: number) {
         // story.startCutscene( () => {
             story.spriteSayText(headSprite, "报告老师");
@@ -444,8 +445,8 @@ namespace bsearch {
     }
 
     //%block
-    //%group = "排队"
     //%blockid=bsearch_at block="第%index 位的编号"
+    //%group = "排队"
     export function at(index: number): number {
         count += 1;
         let finished = false;
