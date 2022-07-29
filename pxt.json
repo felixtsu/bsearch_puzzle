@@ -1,5 +1,5 @@
 {
-    "name": "bsearch_test - 复制",
+    "name": "班长的任务",
     "description": "",
     "dependencies": {
         "device": "*",
@@ -28,5 +28,5 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }

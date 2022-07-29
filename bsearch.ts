@@ -1,7 +1,5 @@
-namespace SpriteKind {
-    export const Student = SpriteKind.create();
-}
-
+//%block="班长的任务" %groups='["游戏控制", "排队"]'
+//%weight=100 color=#6699CC icon="\u2593"
 namespace bsearch {
 
     let weights: number[] = [];
@@ -19,13 +17,15 @@ namespace bsearch {
     let respondingStudent :Sprite;
 
 
-    //%block
+    //%block 
+    //% group = "排队"
     //%blockid=bsearch_size block="一共多少人"
     export function size() {
         return length;
     }
 
     //%block
+    //% group = "游戏控制"
     //%blockid=bsearch_startgame block="开始挑战"
     export function startGame() {
 
@@ -416,6 +416,7 @@ namespace bsearch {
 
 
     //%block
+    //%group = "排队"
     //%blockid=bsearch_solvepuzzle block="在队伍 $weights 里找到编号 $target 的学生 "
     //% draggableParameters
     export function solvePuzzle(cb: (weights: number[], target: number) => void) {
@@ -424,6 +425,7 @@ namespace bsearch {
 
 
     //%block
+    //%group = "排队"
     //%blockid=bsearch_sumbitanswer block="第 %answer 位就是要找的人"
     export function submitAnswer(answer: number) {
         // story.startCutscene( () => {
@@ -442,6 +444,7 @@ namespace bsearch {
     }
 
     //%block
+    //%group = "排队"
     //%blockid=bsearch_at block="第%index 位的编号"
     export function at(index: number): number {
         count += 1;
@@ -507,4 +510,8 @@ namespace bsearch {
         return weights[index];
     }
 
+}
+
+namespace SpriteKind {
+    export const Student = SpriteKind.create();
 }
